@@ -1,0 +1,100 @@
+<script>
+  let files = new Set([
+    "day1_song1.png",
+    "day1_song2.png",
+    "day1_song3.png",
+    "day2_song1.png",
+    "day2_song2.png",
+    "day2_song3.png",
+    "day2_song4.png",
+    "day3_song1.png",
+    "day3_song2.png",
+    "day3_song3.png",
+    "day4_song1.png",
+    "day4_song2.png",
+    "day4_song3.png",
+    "day5_song1.png",
+    "day5_song2.png",
+    "day5_song3.png",
+    "day6_song1.png",
+    "day6_song2.png",
+    "day6_song3.png",
+    "day7_song1.png",
+    "day7_song2.png",
+    "day7_song3.png",
+    "day8_song1.png",
+    "day8_song2.png",
+    "day8_song3.png",
+    "day9_song1.png",
+    "day9_song2.png",
+    "day9_song3.png",
+    "day9_song4.png",
+    "day10_song1.png",
+    "day10_song2.png",
+    "day10_song3.png",
+    "day11_song1.png",
+    "day11_song2.png",
+    "day11_song3.png",
+    "day11_song4.png",
+    "day12_song1.png",
+    "day12_song2.png",
+    "day12_song3.png",
+    "day13_song1.png",
+    "day13_song2.png",
+    "day13_song3.png",
+    "day14_song1.png",
+    "day14_song2.png",
+    "day14_song3.png",
+    "day15_song1.png",
+    "day15_song2.png",
+    "day15_song3.png",
+    "day16_song1.png",
+    "day16_song2.png",
+    "day16_song3.png",
+    "day17_song1.png",
+    "day17_song2.png",
+    "day17_song3.png",
+    "day17_song4.png",
+    "day18_song1.png",
+    "day18_song2.png",
+    "day18_song3.png",
+    "day19_song1.png",
+    "day19_song2.png",
+    "day19_song3.png",
+    "day19_song4.png",
+    "day20_song1.png",
+    "day20_song2.png",
+    "day20_song3.png",
+    "day21_song1.png",
+    "day21_song2.png",
+    "day21_song3.png",
+    "day22_song1.png",
+    "day22_song2.png",
+    "day22_song3.png",
+    "day23_song1.png",
+    "day23_song2.png",
+    "day23_song3.png",
+    "day23_song4.png",
+    "day24_song1.png",
+    "day24_song2.png",
+    "day24_song3.png",
+  ])
+  let date = new Date()
+  let dayInMonth = Math.min(date.getDate(), 24)
+  let month = date.getMonth()
+
+  if (month < 6 || month == 11) {
+    for (let i = dayInMonth; i >= 1; i--) {
+      document.write("<h1>December " + i + "</h1>");
+      for (let j = 1; j< 5; j++) {
+        let file = "day" + i + "_song" + j + ".png"
+        if (!files.has(file)) {
+          continue
+        }
+
+        document.write("<img src=\"images/" + file + "\">");
+      }
+      document.write("<br><br>");
+    }
+  }
+</script>
