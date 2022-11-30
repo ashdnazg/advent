@@ -5,6 +5,7 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎄</text></svg>">
 </head>
 
+
 <script>
   let files = new Set([
     "day01_song1.png",
@@ -112,7 +113,7 @@
     for (let i = dayInMonth; i >= 1; i--) {
       document.write("<h1>December " + i + "</h1>");
       for (let j = 1; j< 5; j++) {
-        let file = "day" + i + "_song" + j + ".png"
+        let file = "day" + (i).toString().padStart(2, "0") + "_song" + j + ".png"
         if (!files.has(file)) {
           continue
         }
